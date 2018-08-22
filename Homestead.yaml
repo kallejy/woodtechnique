@@ -1,0 +1,20 @@
+ip: 192.168.77.77
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: ./
+        to: /home/vagrant/code
+        type: "nfs"
+sites:
+    -
+        map: woodtechnique.femp
+        to: /home/vagrant/code/web
+databases:
+    - woodtechnique_db
+name: woodtechnique
+hostname: woodtechnique
