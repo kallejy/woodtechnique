@@ -11,7 +11,6 @@ host('shishi.oderland.com')
   ->set('branch', 'master')
   ->stage('production')
   ->identityFile('~/.ssh/id_5punkter')
-  ->addSshOption('UserKnownHostsFile', '/dev/null')
   ->addSshOption('StrictHostKeyChecking', 'no');
 
 set('repository', 'git@github.com:kallejy/woodtechnique.git');
