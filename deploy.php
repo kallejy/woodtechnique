@@ -20,5 +20,11 @@ set('keep_releases', 5);
 set('shared_dirs', ['web/app/uploads']);
 set('shared_files', ['.env']);
 
+// Activate plugin after deploy
+task('activate-plugins', function() {
+  run("cd {{ deploy_path }}/current && wp plugin activate redirection");
+});
+after('deploy', 'activate-plugins');
+
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
