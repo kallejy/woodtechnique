@@ -25,7 +25,7 @@
     <div class="row  row-header">
       <div class="main-logo  col-xs-8  col-sm-4">
         <a href="<?php echo home_url(); ?>" class="logo">
-          <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/bullerbybatklubb_logo.png" alt="Bullerby Båtklubb logotyp">
+          <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/woodtechnique_logo.svg" alt="Wood Technique Logotyp">
         </a>
       </div>
       <nav class="main-nav  col-xs-12  col-sm-12  col-md-8  end-md  relative  resize">

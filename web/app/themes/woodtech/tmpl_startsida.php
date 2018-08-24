@@ -17,8 +17,8 @@ get_header(); ?>
 			<img src="<?php the_sub_field('bild'); ?>">
 			<div class="hero-content">
 				<div class="hero-intro-text  hero-center">
-					<p class="hero-title  balance-text"><?php the_sub_field('rubrik'); ?></p>
-					<p class="hero-description"><?php the_sub_field('text'); ?></p>
+					<p class="hero-title  balance-text  white"><?php the_sub_field('rubrik'); ?></p>
+					<p class="hero-description  white"><?php the_sub_field('text'); ?></p>
 					<a class="btn  ib  btn-1  btn-1e" href="<?php the_sub_field('lank'); ?>"><?php the_sub_field('knapptext'); ?></a>
 				</div>
 			</div>
