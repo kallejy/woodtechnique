@@ -1,0 +1,145 @@
+// Button styles
+
+.btn,
+a.btn {
+	border: none;
+	font-family: $headline;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after,
+a.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-1,
+a.btn-1,
+p a.btn-1 {
+	z-index: 9999;
+	border: 2px solid $third-color;
+	color: $white;
+	min-width: 310px;
+	padding: 20px 60px;
+  background: $third-color;
+
+	@include bp-md {
+		padding: 20px 40px;
+		min-width: auto;
+	}
+}
+
+a.btn-1e {
+	overflow: hidden;
+}
+
+a.btn-1e:after {
+	width: 100%;
+	height: 0;
+	top: 50%;
+	left: 50%;
+	background: #fff;
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+	transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+
+a.btn-1e:hover,
+a.btn-1e:active,
+p a.btn-1e:hover,
+p a.btn-1e:active  {
+	color: $secondary-color;
+}
+
+a.btn-1e:hover:after {
+	height: 320%;
+	opacity: 1;
+}
+
+a.btn-1e:active:after {
+	height: 500%;
+	opacity: 1;
+}
+
+// Secondary
+
+.btn-2,
+a.btn-2,
+p a.btn-2,
+.gform_button {
+  font-family: $headline;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+	z-index: 9999;
+	border: 2px solid $third-color;
+	color: $secondary-color;
+	background: transparent;
+	padding: 10px 36px;
+	font-size: .875rem;
+}
+
+.gform_button {
+  cursor: pointer;
+  &:hover {
+    color: $white;
+    background: $third-color;
+  }
+}
+
+a.btn-1d {
+	overflow: hidden;
+}
+
+a.btn-1d:after {
+	width: 100%;
+	height: 0;
+	top: 50%;
+	left: 50%;
+	background: $third-color;
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+	transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+
+a.btn-1d:hover,
+a.btn-1d:active, 
+p a.btn-1d:hover,
+p a.btn-1d:active,
+.gform_button:hover,
+.gform_button:active, {
+	color: $white;
+}
+
+a.btn-1d:hover:after {
+	height: 320%;
+	opacity: 1;
+}
+
+a.btn-1d:active:after {
+	height: 500%;
+	opacity: 1;
+}
+
+.secondary-btn {
+	
+}

@@ -1,0 +1,21 @@
+// Footer styles
+
+footer {
+	position: relative;
+	float: left;
+	width: 100%;
+	background: rgba($third-color, 12/100);
+
+	a:link,
+	a:visited {
+		color: $third-color;
+	}
+
+  p {
+    color: $third-color;
+  }
+}
+
+img.branded-symbol {
+	width: 138px;
+}

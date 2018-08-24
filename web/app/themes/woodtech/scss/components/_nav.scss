@@ -1,0 +1,324 @@
+// Main nav styles
+
+.main-logo {
+	//background: blue;
+
+	a.logo img {
+		width: 138px;
+
+		@include bp-md {
+			width: 72px;
+		}
+
+		@include bp-md {
+			margin-left: 1.5rem;
+		}	
+	}
+}
+
+.main-nav {
+}
+
+.main-nav--list {
+	display: block;
+	text-transform: uppercase;
+  font-family: $headline;
+	font-weight: 500;
+	margin-top: 4.125rem;
+	@include bp-md {
+		font-size: .875rem;
+		letter-spacing: 1px;
+		display: none;
+		background: $lt-grey;
+		margin-top: 4px;
+    @include box-shadow(0px, 5px, 5px, rgba($black, 8/100));
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 1.5rem;
+		@include bp-md {
+			display: block;
+			width: calc(100% - 80px);
+			margin: 0 auto;
+			background: $lt-grey;
+			text-align: left;
+			border-bottom: 1px solid rgba($black, 8/100);
+		}
+
+		&:last-child {
+			margin-right: 0;
+			border-bottom: 0;
+			@include bp-md {
+				margin-right: auto;
+			}
+		}
+
+		&.last-item {
+			margin-right: 0;
+			@include bp-md {
+				margin-right: auto;
+			}
+		}
+
+		a:link,
+		a:visited {
+			color: $secondary-color;
+			@include transition(color .2s);
+
+			&:hover {
+				color: darken($secondary-color, 20%);
+			}
+
+			@include bp-md {
+				padding: 1.225rem 0;
+				display: block;
+			}
+		}
+
+		&.hidden-item {
+			display: none;
+			@include bp-md {
+				display: block;
+			}
+		}
+
+		&.main-menu-phone {
+			position: relative;
+			&:before {
+				position: absolute;
+				content: "";
+				width: 22px;
+				height: 22px;
+				background: url(assets/img/phone_white.svg);
+				background-size: 100%;
+				top: 14px;
+			}
+			a:link,
+			a:visited {
+				margin-left: 32px;
+			}
+		}
+
+		&.main-menu-envelope {
+			position: relative;
+			&:before {
+				position: absolute;
+				content: "";
+				width: 22px;
+				height: 22px;
+				background: url(assets/img/envelope_white.svg);
+				background-size: 100%;
+				top: 14px;
+			}
+			a:link,
+			a:visited {
+				margin-left: 32px;
+			}
+		}
+
+		&.main-menu-user {
+			position: relative;
+			&:before {
+				position: absolute;
+				content: "";
+				width: 22px;
+				height: 22px;
+				background: url(assets/img/user_white.svg);
+				background-size: 100%;
+				top: 14px;
+			}
+			a:link,
+			a:visited {
+				margin-left: 32px;
+			}
+		}
+	}
+}
+
+
+#toggle:checked ~ .main-nav--list {
+  display: block;
+}
+
+#toggle:checked ~ label[for="toggle"] .burger {
+  background: rgba($lt-grey, 0/100);
+}
+#toggle:checked ~ label[for="toggle"] .burger:before {
+  top: 0;
+  @include transform(rotate(45deg));
+}
+#toggle:checked ~ label[for="toggle"] .burger:after {
+  top: -4px;
+  @include transform(rotate(-45deg));
+}
+
+.burger,
+.burger:before,
+.burger:after {
+	position: relative;
+	background: $secondary-color;
+	width: 30px;
+	height: 4px;
+	top: -34px;
+	display: block;
+	float: right;
+	@include border-radius(2px);
+	@include transition(all, .2s);	 
+}
+
+.burger:before {
+	content: "";
+	width: 30px;
+	height: 4px;
+	top: -8px;
+}
+
+.burger:after {
+	content: "";
+	width: 30px;
+	height: 4px;
+	top: 4px;
+}
+
+.burger {
+	margin-right: 2.5rem;
+}
+
+
+.toggle {
+    display: none;
+}
+
+label[for="toggle"] { 
+  position: relative;
+  float: none;
+  display: none;
+  cursor: pointer;
+  select: none;
+  -webkit-user-select: none;    
+  -moz-user-select: none;
+  -ms-select: none;
+  z-index: 1000;
+  @include bp-md {
+    display: block;
+    margin-top: 2px;
+  }
+
+  p {
+    display: none;
+    position: relative;
+    float: left;
+  }
+}
+
+
+
+
+
+
+
+
+// Sub nav styles
+
+.sub-nav--list {
+	display: block;
+	text-transform: uppercase;
+  font-family: $headline;
+	font-weight: 500;
+  font-size: .875rem;
+
+	li {
+		display: inline-block;
+		margin-right: 1.5rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		a:link,
+		a:visited {
+			color: $third-color;
+			@include transition(color .2s);
+
+			&:hover {
+				color: lighten($third-color, 20%);
+			}
+		}
+
+		@include bp-lg {
+			display: block;
+			width: 100%;
+			margin-bottom: 1rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+
+
+
+// Social nav styles
+
+.main-social-nav--list {
+  font-family: $headline;
+	position: absolute;
+	top: -1rem;
+	right: 1rem;
+  padding: .875rem 1rem .65rem 2.5rem;
+	font-size: .75rem;
+  background: rgba($secondary-color, 12/100);
+  @include border-radius(0 0 2px 2px);
+
+	@include bp-md {
+		display: none;
+		/*right: 4rem;
+		top: -2.675rem;*/
+	}
+
+	@include bp-xs {
+		top: -1.95rem;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 3rem;
+
+		a:link,
+		a:visited {
+			color: $third-color;
+
+      &:hover {
+        color: lighten($third-color, 20%);
+      }
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.social-nav--list {
+	display: block;
+	margin-bottom: 1.625rem;
+
+	li {
+		display: inline-block;
+		margin-right: .625rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.icon-size--small {
+		img {
+			width: 29px;
+		}
+	}
+}

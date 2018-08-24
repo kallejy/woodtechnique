@@ -1,0 +1,42 @@
+/*
+Theme Name: Bullerby Båtklubb 2018	
+Theme URI: http://www.bullerbybatklubb.se
+Description: Tema för Bullerby Båtklubb
+Author: Fem punkter
+Author URI: https://www.fempunkter.se
+Version: 1.0
+*/
+
+
+
+
+
+// Fonts
+@import "base/fonts";
+
+// Variables & Libraries
+@import "helpers/variables";
+@import "helpers/mixins";
+
+// Base
+@import "base/reset";
+@import "base/global";
+@import "base/typography";
+@import "base/animate";
+
+// Grid
+@import "grid/grid";
+
+// Components
+@import "components/nav";
+@import "components/header";
+@import "components/footer";
+@import "components/editable";
+
+// Pages
+//import "pages/pagename";
+
+// Elements
+@import "elements/forms";
+@import "elements/buttons";
+@import "elements/modules";
