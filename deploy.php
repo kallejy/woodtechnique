@@ -24,7 +24,7 @@ set('shared_files', ['.env']);
 task('activate-plugins-and-themes', function() {
   run("cd {{ deploy_path }}/current && wp plugin activate redirection");
   run("cd {{ deploy_path }}/current && wp plugin activate advanced-custom-fields-pro");
-  run("cd {{ deploy_path }}/current && wp theme activate woodtechnique");
+  run("cd {{ deploy_path }}/current && wp theme activate woodtech");
 });
 after('deploy', 'activate-plugins-and-themes');
 
