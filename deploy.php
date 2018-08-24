@@ -23,7 +23,7 @@ set('shared_files', ['.env']);
 // Activate plugins and themes after deploy
 task('activate-plugins-and-themes', function() {
   run("cd {{ deploy_path }}/current && wp plugin activate redirection");
-  run("cd {{ deploy_path }}/current && wp plugin activate advanced-custom-fields/advanced-custom-fields");
+  run("cd {{ deploy_path }}/current && wp plugin activate advanced-custom-fields-pro");
   run("cd {{ deploy_path }}/current && wp theme activate woodtechnique");
 });
 after('deploy', 'activate-plugins-and-themes');
