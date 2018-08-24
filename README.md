@@ -4,9 +4,6 @@
 https://github.com/kallejy/woodtechnique
 
 ## GitFlow
-* 
-[GitFlow Examples](länk)
-*
-[Tutorial](länk)
-*
-[Cheatsheet](länk)
+* [GitFlow Examples](https://#)
+* [Tutorial](https://#)
+* [Cheatsheet](https://#)
