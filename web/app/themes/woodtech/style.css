@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*
-Theme Name: Bullerby Båtklubb 2018	
-Theme URI: http://www.bullerbybatklubb.se
-Description: Tema för Bullerby Båtklubb
+Theme Name: Woodtech	
+Theme URI: http://www.wood-technique.se
+Description: Tema för Wood Technique 2018
 Author: Fem punkter
 Author URI: https://www.fempunkter.se
 Version: 1.0
@@ -1563,111 +1563,147 @@ footer {
 img.branded-symbol {
   width: 138px; }
 
-.editable h3 {
-  margin-top: 2rem; }
-.editable h4 {
-  margin-top: 1.75rem; }
-.editable ul {
-  line-height: 1.618;
-  color: #636363;
-  margin-top: -0.5em;
-  margin-bottom: 1em; }
-  .editable ul li {
-    padding-left: 1em;
-    text-indent: -0.5em; }
-    .editable ul li:before {
-      content: "•";
-      padding-right: .5em;
-      color: #B5984C; }
-.editable a:link,
-.editable a:visited {
-  color: #B5984C;
-  border-bottom: 1px solid rgba(181, 152, 76, 0.2);
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s; }
-  .editable a:link:hover,
-  .editable a:visited:hover {
-    color: #0060FB;
-    border-bottom: 1px solid #0b3662; }
-.editable a.link-arrow,
-.editable p a.link-arrow {
-  font-size: 1rem;
-  position: relative;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  color: #636363;
-  border-bottom: none; }
-  .editable a.link-arrow:after,
-  .editable p a.link-arrow:after {
-    position: absolute;
-    float: right;
-    top: 5px;
-    right: -1rem;
-    content: "";
-    width: 6px;
-    height: 12px;
-    background: url(assets/img/arrow_red.svg); }
-  .editable a.link-arrow:hover,
-  .editable p a.link-arrow:hover {
+.editable {
+  /*ul {
+    line-height: 1.618;
+    color: $copy-color;
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+
+    li {
+      padding-left: 1em;
+      text-indent: -0.5em;
+
+      &:before {
+        content: "•";
+        padding-right: .5em;
+        color: $secondary-color;
+      }
+    }
+  }*/ }
+  .editable h3 {
+    margin-top: 2rem; }
+  .editable h4 {
+    margin-top: 1.75rem; }
+  .editable ul {
+    line-height: 1.618;
+    color: #636363;
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+    margin-left: 1em; }
+    .editable ul li {
+      padding-left: 1em;
+      text-indent: -0.5em;
+      position: relative; }
+      .editable ul li:before {
+        content: "•";
+        position: absolute;
+        left: -0.25em;
+        color: #B5984C; }
+  .editable ol {
+    line-height: 1.618;
+    color: #636363;
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+    margin-left: 1em; }
+    .editable ol li {
+      padding-left: 1em;
+      counter-increment: li;
+      position: relative; }
+      .editable ol li:before {
+        content: counter(li) ".";
+        position: absolute;
+        left: -0.5em;
+        color: #B5984C; }
+  .editable a:link,
+  .editable a:visited {
     color: #B5984C;
+    border-bottom: 1px solid rgba(181, 152, 76, 0.2);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .editable a:link:hover,
+    .editable a:visited:hover {
+      color: #0060FB;
+      border-bottom: 1px solid #0b3662; }
+  .editable a.link-arrow,
+  .editable p a.link-arrow {
+    font-size: 1rem;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: #636363;
     border-bottom: none; }
-.editable .gallery {
-  margin-left: -0.5rem;
-  margin-right: -0.5rem; }
-.editable .gallery a:link,
-.editable .gallery a:visited {
-  border-bottom: none; }
-  .editable .gallery a:link:hover,
-  .editable .gallery a:visited:hover {
-    border-bottom: none; }
-.editable .gallery-item {
-  float: left;
-  width: 25%;
-  text-align: center;
-  padding: 0 .5rem .75rem .5rem; }
-  @media only screen and (max-width: 64em) {
-    .editable .gallery-item {
-      width: 50%; } }
-  .editable .gallery-item img {
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px; }
-.editable .gform_wrapper ul {
-  line-height: 1.618;
-  color: #636363;
-  margin-top: -0.5em;
-  margin-bottom: 1em; }
-  .editable .gform_wrapper ul li {
-    padding-left: 0;
-    text-indent: 0em; }
-    .editable .gform_wrapper ul li:before {
+    .editable a.link-arrow:after,
+    .editable p a.link-arrow:after {
+      position: absolute;
+      float: right;
+      top: 5px;
+      right: -1rem;
       content: "";
-      padding-right: 0;
-      color: #0060FB; }
-.editable .alignleft {
-  width: auto;
-  height: auto;
-  float: left;
-  margin-right: 15px; }
-.editable .alignright {
-  width: auto;
-  height: auto;
-  float: right;
-  margin-left: 15px; }
-.editable .aligncenter {
-  width: auto;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px; }
-.editable .full {
-  width: 100%;
-  height: auto; }
-.editable .wp-caption {
-  max-width: 100%; }
+      width: 6px;
+      height: 12px;
+      background: url(assets/img/arrow_red.svg); }
+    .editable a.link-arrow:hover,
+    .editable p a.link-arrow:hover {
+      color: #B5984C;
+      border-bottom: none; }
+  .editable .gallery {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem; }
+  .editable .gallery a:link,
+  .editable .gallery a:visited {
+    border-bottom: none; }
+    .editable .gallery a:link:hover,
+    .editable .gallery a:visited:hover {
+      border-bottom: none; }
+  .editable .gallery-item {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 0 .5rem .75rem .5rem; }
+    @media only screen and (max-width: 64em) {
+      .editable .gallery-item {
+        width: 50%; } }
+    .editable .gallery-item img {
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px; }
+  .editable .gform_wrapper ul {
+    line-height: 1.618;
+    color: #636363;
+    margin-top: -0.5em;
+    margin-bottom: 1em; }
+    .editable .gform_wrapper ul li {
+      padding-left: 0;
+      text-indent: 0em; }
+      .editable .gform_wrapper ul li:before {
+        content: "";
+        padding-right: 0;
+        color: #0060FB; }
+  .editable .alignleft {
+    width: auto;
+    height: auto;
+    float: left;
+    margin-right: 15px; }
+  .editable .alignright {
+    width: auto;
+    height: auto;
+    float: right;
+    margin-left: 15px; }
+  .editable .aligncenter {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; }
+  .editable .full {
+    width: 100%;
+    height: auto; }
+  .editable .wp-caption {
+    max-width: 100%; }
 
 .gform_wrapper ul li {
   padding-right: 0; }
