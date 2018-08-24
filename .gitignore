@@ -22,3 +22,6 @@ vendor/*
 
 # Vagrant
 .vagrant
+
+# Sass
+.sass-cache
