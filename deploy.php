@@ -23,9 +23,10 @@ set('shared_files', ['.env']);
 // Activate plugins and themes deploy
 task('activate-plugins-and-themes', function() {
   run("cd {{ deploy_path }}/current && wp plugin activate redirection");
+  run("cd {{ deploy_path }}/current && wp plugin activate advanced-custom-fields/advanced-custom-fields");
   run("cd {{ deploy_path }}/current && wp theme activate woodtechnique");
 });
-after('deploy', 'activate-plugins-and-themes');
+after('deploy', 'activate-plugins');
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
