@@ -20,11 +20,12 @@ set('keep_releases', 5);
 set('shared_dirs', ['web/app/uploads']);
 set('shared_files', ['.env']);
 
-// Activate plugin after deploy
-task('activate-plugins', function() {
+// Activate plugins and themes deploy
+task('activate-plugins-and-themes', function() {
   run("cd {{ deploy_path }}/current && wp plugin activate redirection");
+  run("cd {{ deploy_path }}/current && wp theme activate woodtechnique");
 });
-after('deploy', 'activate-plugins');
+after('deploy', 'activate-plugins-and-themes');
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
