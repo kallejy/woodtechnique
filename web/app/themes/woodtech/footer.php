@@ -9,10 +9,12 @@
 				<ul class="social-nav--list">
 					<li><a class="icon-size--small" target="_blank" href="<?php the_field('instagramlank', 'option'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/instagram_logo.svg"></a></l>
 					<li><a class="icon-size--small" target="_blank" href="<?php the_field('facebooklank', 'option'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/facebook_logo.svg"></a></li>
-				</ul> 
+				</ul>
+				<?php if ( has_nav_menu( 'footer-menu' ) ) { ?> 
 				<ul class="sub-nav--list">
            <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => false ) ); ?>
-         </ul>
+				 </ul>
+				<?php } ?>
 			</div>
 		</div>
 		<div class="row  special-padding">

@@ -264,12 +264,12 @@ label[for="toggle"] {
 
 // Social nav styles
 
-.main-social-nav--list {
+.top-nav--list {
   font-family: $headline;
 	position: absolute;
 	top: -1rem;
 	right: 1rem;
-  padding: .875rem 1rem .65rem 2.5rem;
+  padding: .875rem 1rem;
 	font-size: .75rem;
   background: rgba($secondary-color, 12/100);
   @include border-radius(0 0 2px 2px);
@@ -286,7 +286,7 @@ label[for="toggle"] {
 
 	li {
 		display: inline-block;
-		margin-right: 3rem;
+		margin-right: 1rem;
 
 		a:link,
 		a:visited {

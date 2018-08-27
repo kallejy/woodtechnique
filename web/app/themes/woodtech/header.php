@@ -30,14 +30,16 @@
       <nav class="main-nav  col-xs-12  col-sm-12  col-md-8  end-md  relative  resize">
         <input class="toggle" id="toggle" value="menu" type="checkbox">
         <label for="toggle"><div class="burger  end-sm"></div><p>Meny</p></label>
+        <?php if ( has_nav_menu( 'main-menu' ) ) { ?>
         <ul class="main-nav--list">
           <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => false ) ); ?>
         </ul>
-        <ul class="main-social-nav--list">
-          <li><a class="icon-size--small  login" href="<?php echo home_url(); ?>/medlemslogin/">Medlemslogin</a></li>
-          <li><a class="icon-size--small  file" href="<?php echo home_url(); ?>/dokument/">Dokument</a></li>
-          <li><a class="icon-size--small  file-upload" href="<?php echo home_url(); ?>/ladda-upp/">Ladda upp</a></li>
+        <?php }
+        if ( has_nav_menu( 'top-menu' ) ) { ?>
+        <ul class="top-nav--list">
+          <?php wp_nav_menu( array( 'theme_location' => 'top-menu', 'container' => false ) ); ?>
         </ul>
+        <?php } ?>
       </nav>
     </div>
   </div>

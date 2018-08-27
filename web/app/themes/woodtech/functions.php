@@ -106,7 +106,8 @@ if ( function_exists('register_sidebar') ) {
 add_theme_support( 'menus' );
 
 register_nav_menus( array(
-	'main-menu' => 'Huvudmeny',
+    'main-menu' => 'Huvudmeny',
+    'top-menu' => 'Toppmeny',
 	'footer-menu' => 'Meny i sidfot',
 ) );
 
@@ -332,22 +333,6 @@ function mytheme_admin_bar_render() {
   $wp_admin_bar->remove_menu( 'comments' );
 }
 add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
-
-
-
-
-
-/**
-* Add user roles
-*/
-add_role(
-    'medlem',
-    __( 'Medlem' ),
-    array(
-        'read'         => false,  // true allows this capability
-        'edit_posts'   => false,
-    )
-);
 
 
 
