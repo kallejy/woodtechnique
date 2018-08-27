@@ -21,8 +21,8 @@ set('shared_dirs', ['web/app/uploads']);
 set('shared_files', ['.env']);
 
 
-// Activate plugins and themes after deploy
-task('activate-plugins-and-themes', function() {
+// After deploy
+task('activate-femp', function() {
   // Plugins
   run("cd {{ deploy_path }}/current && wp plugin activate advanced-custom-fields-pro");
   run("cd {{ deploy_path }}/current && wp plugin activate wordpress-seo");
@@ -32,8 +32,10 @@ task('activate-plugins-and-themes', function() {
   run("cd {{deploy_path}}/current && wp language core activate sv_SE");
   // Theme
   run("cd {{ deploy_path }}/current && wp theme activate woodtech");
+  // Flush permalinks
+  run("wp rewrite flush");
 });
-after('deploy', 'activate-plugins-and-themes');
+after('deploy', 'activate-femp');
 
 // If deploy fails automatically unlock
 after('deploy:failed', 'deploy:unlock');
