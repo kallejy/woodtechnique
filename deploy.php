@@ -22,10 +22,14 @@ set('shared_files', ['.env']);
 
 // Activate plugins and themes after deploy
 task('activate-plugins-and-themes', function() {
-  run("cd {{ deploy_path }}/current && wp plugin activate redirection");
+  // Plugins
   run("cd {{ deploy_path }}/current && wp plugin activate advanced-custom-fields-pro");
   run("cd {{ deploy_path }}/current && wp plugin activate wordpress-seo");
   run("cd {{ deploy_path }}/current && wp plugin activate classic-editor");
+  // Lang
+  run("cd {{deploy_path}}/current && wp language core install sv_SE");
+  run("cd {{deploy_path}}/current && wp language core activate sv_SE");
+  // Theme
   run("cd {{ deploy_path }}/current && wp theme activate woodtech");
 });
 after('deploy', 'activate-plugins-and-themes');
