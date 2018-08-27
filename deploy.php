@@ -4,6 +4,11 @@ namespace Deployer;
 include_once __DIR__ . '/vendor/autoload.php';
 include_once __DIR__ . '/vendor/deployer/deployer/recipe/composer.php';
 
+// Development
+
+// Staging
+
+// Production
 host('shishi.oderland.com')
   ->port(22)
   ->set('deploy_path', '/home/fempunk1/woodtechnique.5punkter.se')

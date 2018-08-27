@@ -67,7 +67,7 @@
 			@include transition(color .2s);
 
 			&:hover {
-				color: darken($secondary-color, 20%);
+				color: $primary-color;
 			}
 
 			@include bp-md {
