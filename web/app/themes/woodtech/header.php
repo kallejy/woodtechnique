@@ -12,7 +12,7 @@
   <title><?php wp_title();?></title>
   <link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/favicon.png">
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" media="all">
-  <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i|Montserrat:400,400i,500,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:400,400i,500,700,700i" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
 
