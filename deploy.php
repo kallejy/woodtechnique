@@ -33,7 +33,7 @@ task('activate-femp', function() {
   // Theme
   run("cd {{ deploy_path }}/current && wp theme activate woodtech");
   // Flush permalinks
-  run("wp rewrite flush");
+  run("cd {{ deploy_path }}/current && wp rewrite flush");
 });
 after('deploy', 'activate-femp');
 
