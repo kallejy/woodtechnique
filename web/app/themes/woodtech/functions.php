@@ -168,7 +168,7 @@ function excerpt($limit,$text = NULL) {
 */
 add_theme_support( 'post-thumbnails' );
 //set_post_thumbnail_size( 50, 50, true );
-//add_image_size( 'category-thumb', 300, 9999, true );
+add_image_size( 'hero-image', 1640, 920, true );
 
 
 
