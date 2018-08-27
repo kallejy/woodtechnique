@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24ef4f173c28287065e942b9e7ca4106",
+    "content-hash": "9ad2f923ba133431ffe4dd13f031a25f",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -763,16 +763,16 @@
         },
         {
             "name": "wp-cli/wp-cli",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/wp-cli.git",
-                "reference": "55a71cce0562fd9d6f7d742cbe2d85a6ea1a80e5"
+                "reference": "8b47483c730b592ca956f1447bb064e90606e4ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/55a71cce0562fd9d6f7d742cbe2d85a6ea1a80e5",
-                "reference": "55a71cce0562fd9d6f7d742cbe2d85a6ea1a80e5",
+                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/8b47483c730b592ca956f1447bb064e90606e4ba",
+                "reference": "8b47483c730b592ca956f1447bb064e90606e4ba",
                 "shasum": ""
             },
             "require": {
@@ -790,7 +790,7 @@
                 "wp-cli/entity-command": "^1.2 || ^2",
                 "wp-cli/extension-command": "^1.1 || ^2",
                 "wp-cli/package-command": "^1 || ^2",
-                "wp-cli/wp-cli-tests": "^2"
+                "wp-cli/wp-cli-tests": "^2.0.8"
             },
             "bin": [
                 "bin/wp",
@@ -817,30 +817,7 @@
                 "cli",
                 "wordpress"
             ],
-            "time": "2018-08-08T19:37:37+00:00"
-        },
-        {
-            "name": "wp-premium/gravityforms",
-            "version": "2.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wp-premium/gravityforms.git",
-                "reference": "b600eb4ad570b74e925d01fdf62a42ce65db9307"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wp-premium/gravityforms/zipball/b600eb4ad570b74e925d01fdf62a42ce65db9307",
-                "reference": "b600eb4ad570b74e925d01fdf62a42ce65db9307",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "."
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "time": "2018-06-26T14:52:21+00:00"
+            "time": "2018-08-23T23:01:42+00:00"
         },
         {
             "name": "wpackagist-plugin/classic-editor",
@@ -886,16 +863,16 @@
     "packages-dev": [
         {
             "name": "deployer/deployer",
-            "version": "v6.2.0",
+            "version": "v6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deployphp/deployer.git",
-                "reference": "00e0b27025ad228edb2e2e1103eb65378ab25a9c"
+                "reference": "3013995ad728e4d3450a6fa5d8ae90a9d7be5a17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/deployer/zipball/00e0b27025ad228edb2e2e1103eb65378ab25a9c",
-                "reference": "00e0b27025ad228edb2e2e1103eb65378ab25a9c",
+                "url": "https://api.github.com/repos/deployphp/deployer/zipball/3013995ad728e4d3450a6fa5d8ae90a9d7be5a17",
+                "reference": "3013995ad728e4d3450a6fa5d8ae90a9d7be5a17",
                 "shasum": ""
             },
             "require": {
@@ -934,7 +911,7 @@
             ],
             "description": "Deployment Tool",
             "homepage": "https://deployer.org",
-            "time": "2018-04-20T12:24:16+00:00"
+            "time": "2018-08-27T06:37:53+00:00"
         },
         {
             "name": "deployer/phar-update",
@@ -994,16 +971,16 @@
         },
         {
             "name": "laravel/homestead",
-            "version": "v7.15.0",
+            "version": "v7.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/homestead.git",
-                "reference": "e682ec04c2c618776fbfa103b5ecec6063a7f244"
+                "reference": "068814af93aced781d33b4712f211c1c55cedfbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/homestead/zipball/e682ec04c2c618776fbfa103b5ecec6063a7f244",
-                "reference": "e682ec04c2c618776fbfa103b5ecec6063a7f244",
+                "url": "https://api.github.com/repos/laravel/homestead/zipball/068814af93aced781d33b4712f211c1c55cedfbc",
+                "reference": "068814af93aced781d33b4712f211c1c55cedfbc",
                 "shasum": ""
             },
             "require": {
@@ -1041,7 +1018,7 @@
                 }
             ],
             "description": "A virtual machine for web artisans.",
-            "time": "2018-08-20T18:43:30+00:00"
+            "time": "2018-08-23T16:14:12+00:00"
         },
         {
             "name": "pimple/pimple",

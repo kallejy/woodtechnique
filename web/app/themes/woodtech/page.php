@@ -7,7 +7,7 @@ get_header(); ?>
 
 <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 
-<section class="hero-sub-page" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat #0B3662; background-size: cover; background-position: center;">
+<section class="hero-sub-page" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat #2d411a; background-size: cover; background-position: center;">
       <div class="container-fluid  container">
         <div class="row  hero-sub">
           <div class="col-xs-12">
