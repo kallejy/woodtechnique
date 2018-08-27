@@ -27,8 +27,6 @@ task('activate-femp', function() {
   run("cd {{ deploy_path }}/current && wp plugin activate advanced-custom-fields-pro");
   run("cd {{ deploy_path }}/current && wp plugin activate wordpress-seo");
   run("cd {{ deploy_path }}/current && wp plugin activate classic-editor");
-  run("cd {{ deploy_path }}/current && wp plugin install gravityformscli --activate");
-  run("cd {{ deploy_path }}/current && wp gf install --force --key=4d0f700cb134a2bca20e0777651661a7 --activate");
   // Lang
   run("cd {{ deploy_path }}/current && wp language core install sv_SE");
   run("cd {{ deploy_path }}/current && wp language core activate sv_SE");
