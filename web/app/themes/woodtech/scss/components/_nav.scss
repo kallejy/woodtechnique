@@ -160,7 +160,7 @@
 	background: $secondary-color;
 	width: 30px;
 	height: 4px;
-	top: -34px;
+	top: -30px;
 	display: block;
 	float: right;
 	@include border-radius(2px);
@@ -238,7 +238,7 @@ label[for="toggle"] {
 
 		a:link,
 		a:visited {
-			color: $third-color;
+			color: $white;
 			@include transition(color .2s);
 
 			&:hover {

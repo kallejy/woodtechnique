@@ -5,7 +5,7 @@ Template Name: Startsida
 get_header(); ?>
 
 <section class="hero-intro">
-	<div class="boman-hero--slider">
+	<div class="hero-slider">
 
 		<?php
 		// check if the repeater field has rows of data
@@ -13,7 +13,7 @@ get_header(); ?>
 		// loop through the rows of data
 		while ( have_rows('slider') ) : the_row(); ?>
 
-		<div class="boman-hero--slide">
+		<div class="start-hero--slide">
 			<img src="<?php the_sub_field('bild'); ?>">
 			<div class="hero-content">
 				<div class="hero-intro-text  hero-center">

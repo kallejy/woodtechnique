@@ -1,9 +1,9 @@
 <footer>
 	<div class="container-fluid  container">
 		
-		<div class="row  border-bottom  less-padding  onwhite-border  bottom-xs">
+		<div class="row  border-bottom  less-padding  onblack-border  bottom-xs">
 			<div class="footer-logo  col-xs-12  col-sm-4  start-sm  center-xs  xs2">
-				<img class="branded-symbol" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/woodtechnique_logo.svg" alt="Wood Technique Logotyp">
+				<img class="branded-symbol" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/woodtechnique_logo_neg.svg" alt="Wood Technique Logotyp Negativ">
 			</div>
 			<div class="col-xs-12  col-sm-8  end-sm  center-xs">
 				<ul class="social-nav--list">

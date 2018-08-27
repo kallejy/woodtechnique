@@ -31,9 +31,9 @@ get_header(); ?>
             the_post_thumbnail( 'full' );
             } ?>
             <h3 class="news-title"><?php the_title(); ?></h3>
-            <p class="sm-co">Publicerad <?php the_time('Y-m-d'); ?> av Bullerby</p>
+            <p class="sm-co">Publicerad <?php the_time('Y-m-d'); ?> av <?php the_author(); ?></p>
             <p class="limit-two-rows  t-mb1"><?php echo  get_the_excerpt(); ?></p>
-            <a class="link-arrow" href="<?php the_permalink(); ?>"><?php echo __('Läs hela nyheten',"bullerby"); ?></a>
+            <a class="link-arrow" href="<?php the_permalink(); ?>"><?php echo __('Läs hela nyheten',"starttheme"); ?></a>
           </a>
         </div>
       <?php endwhile; endif; ?>

@@ -4,18 +4,18 @@ footer {
 	position: relative;
 	float: left;
 	width: 100%;
-	background: rgba($third-color, 12/100);
+	background: rgba($black, 86/100);
 
 	a:link,
 	a:visited {
-		color: $third-color;
+		color: $white;
 	}
 
   p {
-    color: $third-color;
+    color: $white;
   }
 }
 
 img.branded-symbol {
-	width: 138px;
+	width: 118px;
 }
