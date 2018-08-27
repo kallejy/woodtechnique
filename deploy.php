@@ -20,6 +20,7 @@ set('keep_releases', 5);
 set('shared_dirs', ['web/app/uploads']);
 set('shared_files', ['.env']);
 
+
 // Activate plugins and themes after deploy
 task('activate-plugins-and-themes', function() {
   // Plugins
@@ -34,5 +35,5 @@ task('activate-plugins-and-themes', function() {
 });
 after('deploy', 'activate-plugins-and-themes');
 
-// [Optional] if deploy fails automatically unlock.
+// If deploy fails automatically unlock
 after('deploy:failed', 'deploy:unlock');
