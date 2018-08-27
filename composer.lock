@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "443684c4618d812b386039fa7c3602d7",
+    "content-hash": "24ef4f173c28287065e942b9e7ca4106",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -818,6 +818,29 @@
                 "wordpress"
             ],
             "time": "2018-08-08T19:37:37+00:00"
+        },
+        {
+            "name": "wp-premium/gravityforms",
+            "version": "2.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-premium/gravityforms.git",
+                "reference": "b600eb4ad570b74e925d01fdf62a42ce65db9307"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-premium/gravityforms/zipball/b600eb4ad570b74e925d01fdf62a42ce65db9307",
+                "reference": "b600eb4ad570b74e925d01fdf62a42ce65db9307",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "."
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2018-06-26T14:52:21+00:00"
         },
         {
             "name": "wpackagist-plugin/classic-editor",

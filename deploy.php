@@ -32,7 +32,7 @@ task('activate-femp', function() {
   run("cd {{ deploy_path }}/current && wp language core activate sv_SE");
   // Theme
   run("cd {{ deploy_path }}/current && wp theme activate woodtech");
-  // Flush permalinks
+  // Set permalinks
   run("cd {{ deploy_path }}/current && wp rewrite structure '/%postname%/'");
 });
 after('deploy', 'activate-femp');
