@@ -21,8 +21,8 @@ jQuery(document).ready(function($) {
       autoplay: true,
       autoplaySpeed: 3000,
       lazyLoad: 'ondemand',
-      prevArrow: '<button class="slick-prev"><img class="svg  sl-prev" src="../woodtech/assets/img/arrow_left.svg"></button>',
-      nextArrow: '<button class="slick-next"><img class="svg  sl-next" src="../woodtech/assets/img/arrow_right.svg"></button>',
+      prevArrow: '<button class="slick-prev"><img class="svg  sl-prev" src="/app/themes/woodtech/assets/img/arrow_left.svg"></button>',
+      nextArrow: '<button class="slick-next"><img class="svg  sl-next" src="/app/themes/woodtech/assets/img/arrow_right.svg"></button>',
       responsive: [
         {
         breakpoint: 768,
