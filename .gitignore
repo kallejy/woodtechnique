@@ -10,6 +10,7 @@ web/app/uploads/*
 web/wp
 web/.htaccess
 web/app/languages
+web/app/id_5punkter
 
 # Dotenv
 .env
