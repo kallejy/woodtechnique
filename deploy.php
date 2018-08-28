@@ -4,10 +4,17 @@ namespace Deployer;
 include_once __DIR__ . '/vendor/autoload.php';
 include_once __DIR__ . '/vendor/deployer/deployer/recipe/composer.php';
 
+set('repository', 'git@github.com:kallejy/woodtechnique.git');
+set('env_vars', '/usr/bin/env');
+set('keep_releases', 5);
+set('git_tty', true);
+set('shared_dirs', ['web/app/uploads']);
+set('shared_files', ['.env','web/.htaccess']);
+
 
 // Development
 localhost()
-    ->stage('development');
+  ->stage('development');
 
 // Staging
 
@@ -19,15 +26,8 @@ host('shishi.oderland.com')
   ->set('branch', 'master')
   ->stage('production')
   ->identityFile('~/.ssh/id_5punkter')
-  ->addSshOption('StrictHostKeyChecking', 'no');
-
-
-set('repository', 'git@github.com:kallejy/woodtechnique.git');
-set('env_vars', '/usr/bin/env');
-set('keep_releases', 5);
-set('git_tty', true);
-set('shared_dirs', ['web/app/uploads']);
-set('shared_files', ['.env']);
+  ->addSshOption('StrictHostKeyChecking', 'no')
+  ->addSshOption('UserKnownHostsFile', '/dev/null');
 
 
 // After deploy
@@ -55,20 +55,21 @@ task('pull', function () {
   $host = Task\Context::get()->getHost();
   $user = $host->getUser();
   $hostname = $host->getHostname();
+  $identityfile = $host->getIdentityFile();
   $url = parse_url(run("cd {{deploy_path}}/current && wp config get --constant=WP_HOME"), PHP_URL_HOST);
   $localUrl = parse_url(runLocally("wp config get --constant=WP_HOME"), PHP_URL_HOST);
   $actions = [
-      "ssh {$user}@{$hostname} 'cd {{deploy_path}}/current && wp db export - | gzip' > db.sql.gz",
+      "ssh {$user}@{$hostname} -i {$identityfile} 'cd {{deploy_path}}/current && wp db export - | gzip' > db.sql.gz",
       "gzip -df db.sql.gz",
-      "vendor/bin/wp language core install sv_SE",
-      "vendor/bin/wp db import db.sql",
+      "export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/mysql/bin",
+      "wp db import db.sql",
       "rm -f db.sql",
-      "vendor/bin/wp search-replace '{$url}' '{$localUrl}' --all-tables",
-      "rsync --exclude .cache -re ssh " .
-          "{$user}@{$hostname}:{{deploy_path}}/shared/web/app/uploads web/app",
-      "vendor/bin/wp rewrite flush",
-      "vendor/bin/wp cache flush",
-      "vendor/bin/wp theme update --all"
+      "wp search-replace '{$url}' '{$localUrl}' --all-tables",
+      "rsync --exclude '.cache' -re 'ssh -i {$identityfile}' " .
+            "{$user}@{$hostname}:{{deploy_path}}/shared/web/app/uploads web/app",
+      "wp rewrite flush",
+      "wp cache flush",
+      "wp theme update --all"
   ];
   foreach ($actions as $action) {
       writeln("{$action}");
