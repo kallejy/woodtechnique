@@ -4,7 +4,10 @@ namespace Deployer;
 include_once __DIR__ . '/vendor/autoload.php';
 include_once __DIR__ . '/vendor/deployer/deployer/recipe/composer.php';
 
+
 // Development
+localhost()
+    ->stage('development');
 
 // Staging
 
@@ -18,8 +21,8 @@ host('shishi.oderland.com')
   ->identityFile('~/.ssh/id_5punkter')
   ->addSshOption('StrictHostKeyChecking', 'no');
 
-set('repository', 'git@github.com:kallejy/woodtechnique.git');
 
+set('repository', 'git@github.com:kallejy/woodtechnique.git');
 set('env_vars', '/usr/bin/env');
 set('keep_releases', 5);
 set('git_tty', true);
