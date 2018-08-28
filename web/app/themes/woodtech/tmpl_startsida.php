@@ -5,7 +5,7 @@ Template Name: Startsida
 get_header(); ?>
 
 <section class="hero-intro">
-	<div class="boman-hero--slider">
+	<div class="hero-slider">
 
 		<?php
 		// check if the repeater field has rows of data
@@ -13,12 +13,17 @@ get_header(); ?>
 		// loop through the rows of data
 		while ( have_rows('slider') ) : the_row(); ?>
 
-		<div class="boman-hero--slide">
-			<img src="<?php the_sub_field('bild'); ?>">
+		<?php
+    $attachment_id = get_sub_field('bild');
+    $size = "hero-image"; // (thumbnail, medium, large, full or custom size)
+    $image = wp_get_attachment_image_src( $attachment_id, $size ); ?>
+
+		<div class="start-hero--slide">
+			<img src="<?php echo $image[0]; ?>">
 			<div class="hero-content">
 				<div class="hero-intro-text  hero-center">
-					<p class="hero-title  balance-text"><?php the_sub_field('rubrik'); ?></p>
-					<p class="hero-description"><?php the_sub_field('text'); ?></p>
+					<p class="hero-title  balance-text  white"><?php the_sub_field('rubrik'); ?></p>
+					<p class="hero-description  white"><?php the_sub_field('text'); ?></p>
 					<a class="btn  ib  btn-1  btn-1e" href="<?php the_sub_field('lank'); ?>"><?php the_sub_field('knapptext'); ?></a>
 				</div>
 			</div>

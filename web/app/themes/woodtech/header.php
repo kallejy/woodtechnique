@@ -3,7 +3,7 @@
 <head>
   <!--
     Designed & Developed by Fem punkter (@fempunkter)
-    http://fempunkter.se
+    https://fempunkter.se
   -->
   <meta charset="utf-8">
   <meta http-equiv=X-UA-Compatible content="IE=edge">
@@ -11,8 +11,7 @@
   <meta name="format-detection" content="telephone=no">
   <title><?php wp_title();?></title>
   <link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/favicon.png">
-  <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" media="all">
-  <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i|Montserrat:400,400i,500,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:400,400i,500,700,700i" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
 
@@ -25,20 +24,22 @@
     <div class="row  row-header">
       <div class="main-logo  col-xs-8  col-sm-4">
         <a href="<?php echo home_url(); ?>" class="logo">
-          <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/bullerbybatklubb_logo.png" alt="Bullerby Båtklubb logotyp">
+          <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/woodtechnique_logo.svg" alt="Wood Technique Logotyp">
         </a>
       </div>
       <nav class="main-nav  col-xs-12  col-sm-12  col-md-8  end-md  relative  resize">
         <input class="toggle" id="toggle" value="menu" type="checkbox">
         <label for="toggle"><div class="burger  end-sm"></div><p>Meny</p></label>
+        <?php if ( has_nav_menu( 'main-menu' ) ) { ?>
         <ul class="main-nav--list">
           <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => false ) ); ?>
         </ul>
-        <ul class="main-social-nav--list">
-          <li><a class="icon-size--small  login" href="<?php echo home_url(); ?>/medlemslogin/">Medlemslogin</a></li>
-          <li><a class="icon-size--small  file" href="<?php echo home_url(); ?>/dokument/">Dokument</a></li>
-          <li><a class="icon-size--small  file-upload" href="<?php echo home_url(); ?>/ladda-upp/">Ladda upp</a></li>
+        <?php }
+        if ( has_nav_menu( 'top-menu' ) ) { ?>
+        <ul class="top-nav--list">
+          <?php wp_nav_menu( array( 'theme_location' => 'top-menu', 'container' => false ) ); ?>
         </ul>
+        <?php } ?>
       </nav>
     </div>
   </div>

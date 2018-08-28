@@ -179,11 +179,10 @@ a.file-pdf {
 }
 
 .hero-intro-text {
-  background: rgba($white, 86/100);
-  padding: 2rem;
+  
 }
 
-.boman-hero--slider {
+.hero-slider {
     width: 100%;
     height: 60vh;
     @include bp-md {

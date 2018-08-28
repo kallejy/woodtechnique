@@ -57,13 +57,12 @@ add_action('init', 'disable_embeds_init', 9999);
 * Enqueue scripts and styles
 */
 function femp_scripts() {
-  wp_enqueue_script ( 'jquery' );
-  wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.min.js', array(), '1.0.0', true);
-  wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array(), '1.0.0', true);
-  wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/custom.js', array(), '1.0.0', true);
-}
-
-add_action( 'wp_enqueue_scripts', 'femp_scripts' );
+    wp_enqueue_script ( 'jquery' );
+    wp_enqueue_style ( 'style', get_template_directory_uri() . '/style.css', array(), '1.0.0', false);
+    wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/custom.js', array(), '1.0.0', true);
+  }
+  
+  add_action( 'wp_enqueue_scripts', 'femp_scripts' );
 
 
 
@@ -107,7 +106,8 @@ if ( function_exists('register_sidebar') ) {
 add_theme_support( 'menus' );
 
 register_nav_menus( array(
-	'main-menu' => 'Huvudmeny',
+    'main-menu' => 'Huvudmeny',
+    'top-menu' => 'Toppmeny',
 	'footer-menu' => 'Meny i sidfot',
 ) );
 
@@ -169,7 +169,7 @@ function excerpt($limit,$text = NULL) {
 */
 add_theme_support( 'post-thumbnails' );
 //set_post_thumbnail_size( 50, 50, true );
-//add_image_size( 'category-thumb', 300, 9999, true );
+add_image_size( 'hero-image', 1640, 920, true );
 
 
 
@@ -224,6 +224,33 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 	
+}
+
+
+
+
+
+/** 
+* Spara acf-json sync
+*/
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+function my_acf_json_save_point( $path ) {
+    // update path
+    $path = get_stylesheet_directory() . '/acf-json';
+    
+    return $path;
+}
+
+// Ladda acf-json
+
+add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+function my_acf_json_load_point( $paths ) {
+    // remove original path (optional)
+    unset($paths[0]);
+    // append path
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+    // return
+    return $paths;   
 }
 
 
@@ -311,22 +338,6 @@ add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
 
 
 
-/**
-* Add user roles
-*/
-add_role(
-    'medlem',
-    __( 'Medlem' ),
-    array(
-        'read'         => false,  // true allows this capability
-        'edit_posts'   => false,
-    )
-);
-
-
-
-
-
 
 /**
 * Remove admin bar for everyone except admins
@@ -358,7 +369,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 function femp_login_logo() { ?>
     <style type="text/css">
         body.login div#login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/img/bullerbybatklubb_logo.png);
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/img/woodtechnique_logo.svg);
             background-size: 40%;
             width: 100%;
         }

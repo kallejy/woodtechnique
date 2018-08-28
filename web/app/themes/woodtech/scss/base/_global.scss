@@ -20,7 +20,7 @@ html, body {
 
 body {
   font-family: $copy;
-  background: $bg; 
+  background: url(assets/img/bgnoise_lg.png) repeat $bg; 
 }
 
 .wow {
