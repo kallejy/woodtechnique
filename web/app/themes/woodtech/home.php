@@ -32,7 +32,7 @@ get_header(); ?>
             } ?>
             <h3 class="news-title"><?php the_title(); ?></h3>
             <p class="sm-co">Publicerad <?php the_time('Y-m-d'); ?> av <?php the_author(); ?></p>
-            <p class="limit-two-rows  t-mb1"><?php echo  get_the_excerpt(); ?></p>
+            <p class="limit-two-rows  t-mb1"><?php echo excerpt(50); ?></p>
             <a class="link-arrow" href="<?php the_permalink(); ?>"><?php echo __('Läs hela nyheten',"starttheme"); ?></a>
           </a>
         </div>
