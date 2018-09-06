@@ -6,7 +6,6 @@
   margin: 0 auto;
   display: block;
   overflow: auto;
-  @include box-shadow(0px, 0px, 1rem, rgba($black, 12/100));
 }
 
 .content {

@@ -8,13 +8,13 @@ get_header(); ?>
 <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 
 <section class="hero-sub-page  news-bg">
-      <div class="container-fluid  container">
-        <div class="row  hero-sub">
-          <div class="col-xs-12">
-            <h1 class="hero-sub  white">Nyheter</h1>
-          </div>
-        </div>
+  <div class="container-fluid  container">
+    <div class="row  hero-sub">
+      <div class="col-xs-12">
+        <h1 class="hero-sub  white">Nyheter</h1>
       </div>
+    </div>
+  </div>
 </section>
 
 <section class="content">
