@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ad2f923ba133431ffe4dd13f031a25f",
+    "content-hash": "443684c4618d812b386039fa7c3602d7",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -23,16 +23,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "049797d727261bf27f2690430d935067710049c2"
+                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/049797d727261bf27f2690430d935067710049c2",
-                "reference": "049797d727261bf27f2690430d935067710049c2",
+                "url": "https://api.github.com/repos/composer/installers/zipball/cfcca6b1b60bc4974324efb5783c13dca6932b5b",
+                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b",
                 "shasum": ""
             },
             "require": {
@@ -139,7 +139,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-12-29T09:13:20+00:00"
+            "time": "2018-08-27T06:10:37+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -566,7 +566,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.1.3",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -713,16 +713,16 @@
         },
         {
             "name": "wp-cli/php-cli-tools",
-            "version": "v0.11.9",
+            "version": "v0.11.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/php-cli-tools.git",
-                "reference": "766653b45f99c817edb2b05dc23f7ee9a893768d"
+                "reference": "f99308f92487efe18b5aac2057240fe5bb542374"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/766653b45f99c817edb2b05dc23f7ee9a893768d",
-                "reference": "766653b45f99c817edb2b05dc23f7ee9a893768d",
+                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/f99308f92487efe18b5aac2057240fe5bb542374",
+                "reference": "f99308f92487efe18b5aac2057240fe5bb542374",
                 "shasum": ""
             },
             "require": {
@@ -759,7 +759,7 @@
                 "cli",
                 "console"
             ],
-            "time": "2018-04-20T08:11:30+00:00"
+            "time": "2018-08-22T10:11:06+00:00"
         },
         {
             "name": "wp-cli/wp-cli",
@@ -841,15 +841,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "8.0",
+            "version": "8.2.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/8.0"
+                "reference": "tags/8.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -971,16 +971,16 @@
         },
         {
             "name": "laravel/homestead",
-            "version": "v7.15.1",
+            "version": "v7.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/homestead.git",
-                "reference": "068814af93aced781d33b4712f211c1c55cedfbc"
+                "reference": "0a29bebaf0c5dae1502c5169dc5ec02ee7847736"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/homestead/zipball/068814af93aced781d33b4712f211c1c55cedfbc",
-                "reference": "068814af93aced781d33b4712f211c1c55cedfbc",
+                "url": "https://api.github.com/repos/laravel/homestead/zipball/0a29bebaf0c5dae1502c5169dc5ec02ee7847736",
+                "reference": "0a29bebaf0c5dae1502c5169dc5ec02ee7847736",
                 "shasum": ""
             },
             "require": {
@@ -1018,7 +1018,7 @@
                 }
             ],
             "description": "A virtual machine for web artisans.",
-            "time": "2018-08-23T16:14:12+00:00"
+            "time": "2018-09-09T15:17:06+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -1172,7 +1172,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.1.3",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -1357,16 +1357,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.1.3",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "f01fc7a4493572f7f506c49dcb50ad01fb3a2f56"
+                "reference": "86cdb930a6a855b0ab35fb60c1504cb36184f843"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/f01fc7a4493572f7f506c49dcb50ad01fb3a2f56",
-                "reference": "f01fc7a4493572f7f506c49dcb50ad01fb3a2f56",
+                "url": "https://api.github.com/repos/symfony/process/zipball/86cdb930a6a855b0ab35fb60c1504cb36184f843",
+                "reference": "86cdb930a6a855b0ab35fb60c1504cb36184f843",
                 "shasum": ""
             },
             "require": {
@@ -1402,20 +1402,20 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T11:24:31+00:00"
+            "time": "2018-08-03T11:13:38+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.1.3",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "46bc69aa91fc4ab78a96ce67873a6b0c148fd48c"
+                "reference": "b832cc289608b6d305f62149df91529a2ab3c314"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/46bc69aa91fc4ab78a96ce67873a6b0c148fd48c",
-                "reference": "46bc69aa91fc4ab78a96ce67873a6b0c148fd48c",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/b832cc289608b6d305f62149df91529a2ab3c314",
+                "reference": "b832cc289608b6d305f62149df91529a2ab3c314",
                 "shasum": ""
             },
             "require": {
@@ -1461,7 +1461,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T11:24:31+00:00"
+            "time": "2018-08-18T16:52:46+00:00"
         }
     ],
     "aliases": [],
