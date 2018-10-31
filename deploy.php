@@ -43,9 +43,9 @@ task('activate-femp', function() {
   run("cd {{ deploy_path }}/current && wp theme activate woodtech");
   // Set permalinks
   run("cd {{ deploy_path }}/current && wp rewrite flush --hard && wp rewrite structure '/%postname%/'");
-  /* Gravity forms
+  // Gravity forms
   run("cd {{deploy_path}}/current && wp plugin activate gravityformscli");
-  run("cd {{deploy_path}}/current && wp gf install --key=4d0f700cb134a2bca20e0777651661a7 --activate");*/
+  run("cd {{deploy_path}}/current && wp gf install --key=4d0f700cb134a2bca20e0777651661a7 --activate");
 });
 after('deploy', 'activate-femp');
 
