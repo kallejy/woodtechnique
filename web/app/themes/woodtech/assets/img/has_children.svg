@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>has_children</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="has_children" transform="translate(0.000000, -5.000000)" fill="#5C1910" fill-rule="nonzero">
+            <path d="M4,4 L4,9 C4,9.5522847 3.55228475,10 3,10 C2.44771525,10 2,9.5522847 2,9 L2,3 C2,2.44771525 2.44771525,2 3,2 L9,2 C9.5522847,2 10,2.44771525 10,3 C10,3.55228475 9.5522847,4 9,4 L4,4 Z" id="Combined-Shape" transform="translate(6.000000, 6.000000) rotate(-135.000000) translate(-6.000000, -6.000000) "></path>
+        </g>
+    </g>
+</svg>
