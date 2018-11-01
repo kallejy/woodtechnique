@@ -17,6 +17,16 @@ localhost()
   ->stage('development');
 
 // Staging
+host('staging')
+  ->hostname('91.201.60.110')
+  ->set('deploy_path', '/home/wttooling/staging.wttooling.se')
+  ->port(22)
+  ->user('wttooling')
+  ->set('branch', 'master')
+  ->stage('staging')
+  ->identityFile('~/.ssh/id_5punkter')
+  ->addSshOption('StrictHostKeyChecking', 'no')
+  ->addSshOption('UserKnownHostsFile', '/dev/null');
 
 // Production
 host('shishi.oderland.com')
