@@ -12,6 +12,15 @@
   <title><?php wp_title();?></title>
   <link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:400,400i,500,700,700i" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128516288-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-128516288-1');
+  </script>
   <?php wp_head(); ?>
 </head>
 
