@@ -18,6 +18,7 @@ localhost()
 
 // Staging
 host('91.201.60.110')
+  ->hostname('staging')
   ->set('deploy_path', '/home/wttooling/staging.wttooling.se')
   ->set('local_path', '/Users/kallenilsson/Documents/dev/woodtechnique')
   ->port(22)
@@ -30,9 +31,10 @@ host('91.201.60.110')
 
 // Production
 host('91.201.60.110')
-  ->port(22)
+  ->hostname('production')
   ->set('deploy_path', '/home/wttooling/wttooling.se')
   ->set('local_path', '/Users/kallenilsson/Documents/dev/woodtechnique')
+  ->port(22)
   ->user('wttooling')
   ->set('branch', 'master')
   ->stage('production')
