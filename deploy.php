@@ -89,3 +89,33 @@ task('pull', function () {
       writeln(runLocally($action, ['timeout' => 999]));
   }
 })->desc('Get the production setup to your local dev env');
+
+
+// First sync
+task('firstsync', function () {
+  $host = Task\Context::get()->getHost();
+  $user = $host->getUser();
+  $hostname = $host->getHostname();
+  $identityfile = $host->getIdentityFile();
+  $url = parse_url(run("cd {{deploy_path}}/current && wp config get --constant=WP_HOME"), PHP_URL_HOST);
+  $localUrl = parse_url(runLocally("wp config get --constant=WP_HOME"), PHP_URL_HOST);
+  $actions = [
+      "cd {{local_path}}/web && wp db export - | gzip > {{local_path}}/web/db.sql.gz",
+      "scp -i {$identityfile} {{local_path}}/web/db.sql.gz {$user}@{$hostname}:{{deploy_path}}/current",
+      "ssh {$user}@{$hostname} -i {$identityfile} 'cd {{deploy_path}}/current && gzip -df db.sql.gz'",
+      "ssh {$user}@{$hostname} -i {$identityfile} 'export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/mysql/bin'",
+      "ssh {$user}@{$hostname} -i {$identityfile} 'cd {{deploy_path}}/current && wp db import db.sql'",
+      "rm -f {{local_path}}/web/db.sql.gz",
+      "ssh {$user}@{$hostname} -i {$identityfile} 'cd {{deploy_path}}/current && rm -f db.sql'",
+      "ssh {$user}@{$hostname} -i {$identityfile} 'cd {{deploy_path}}/current && wp search-replace '{$localUrl}' '{$url}' --all-tables'",
+      "rsync --exclude '.cache' -re 'ssh -i {$identityfile}' {{local_path}}/web/app/uploads {$user}@{$hostname}:{{deploy_path}}/shared/web/app",
+      "ssh {$user}@{$hostname} -i {$identityfile} 'cd {{deploy_path}}/current && wp rewrite flush'",
+      "ssh {$user}@{$hostname} -i {$identityfile} 'cd {{deploy_path}}/current && wp cache flush'",
+      "ssh {$user}@{$hostname} -i {$identityfile} 'cd {{deploy_path}}/current && wp theme update --all'",
+      "say first: synk: done"
+  ];
+  foreach ($actions as $action) {
+      writeln("{$action}");
+      writeln(runLocally($action, ['timeout' => 999]));
+  }
+})->desc('Sync from local dev to production/staging');
