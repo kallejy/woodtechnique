@@ -17,8 +17,7 @@ localhost()
   ->stage('development');
 
 // Staging
-host('staging')
-  ->hostname('91.201.60.110')
+host('91.201.60.110')
   ->set('deploy_path', '/home/wttooling/staging.wttooling.se')
   ->set('local_path', '/Users/kallenilsson/Documents/dev/woodtechnique')
   ->port(22)
@@ -30,8 +29,7 @@ host('staging')
   ->addSshOption('UserKnownHostsFile', '/dev/null');
 
 // Production
-host('production')
-  ->hostname('91.201.60.110')
+host('91.201.60.110')
   ->set('deploy_path', '/home/wttooling/wttooling.se')
   ->set('local_path', '/Users/kallenilsson/Documents/dev/woodtechnique')
   ->port(22)
@@ -81,11 +79,11 @@ task('pull', function () {
       "wp db import db.sql",
       "rm -f db.sql",
       "wp search-replace '{$url}' '{$localUrl}' --all-tables",
-      "rsync --exclude '.cache' -re 'ssh -i {$identityfile}' " .
-            "{$user}@{$hostname}:{{deploy_path}}/shared/web/app/uploads web/app",
+     "rsync --exclude '.cache' -re 'ssh -i {$identityfile}' " . "{$user}@{$hostname}:{{deploy_path}}/shared/web/app/uploads web/app",
       "wp rewrite flush",
       "wp cache flush",
-      "wp theme update --all"
+      "wp theme update --all",
+      "say dep: pull: done"
   ];
   foreach ($actions as $action) {
       writeln("{$action}");
