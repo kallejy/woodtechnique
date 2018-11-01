@@ -17,8 +17,7 @@ localhost()
   ->stage('development');
 
 // Staging
-host('staging')
-  ->hostname('91.201.60.110')
+host('91.201.60.110')
   ->set('deploy_path', '/home/wttooling/staging.wttooling.se')
   ->set('local_path', '/Users/kallenilsson/Documents/dev/woodtechnique')
   ->port(22)
