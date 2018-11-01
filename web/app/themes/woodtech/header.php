@@ -31,12 +31,12 @@
   <div class="header-bg-fix"></div>
   <div class="container-fluid  container  resize">
     <div class="row  row-header">
-      <div class="main-logo  col-xs-8  col-sm-4">
+      <div class="main-logo  col-xs-8  col-sm-4  col-md-3">
         <a href="<?php echo home_url(); ?>" class="logo">
           <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/woodtechnique_logo.svg" alt="Wood Technique Logotyp">
         </a>
       </div>
-      <nav class="main-nav  col-xs-12  col-sm-12  col-md-8  end-md  relative  resize">
+      <nav class="main-nav  col-xs-12  col-sm-12  col-md-9  end-md  relative  resize">
         <input class="toggle" id="toggle" value="menu" type="checkbox">
         <label for="toggle"><div class="burger  end-sm"></div><p>Meny</p></label>
         <?php if ( has_nav_menu( 'main-menu' ) ) { ?>
