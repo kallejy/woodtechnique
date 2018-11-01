@@ -17,8 +17,8 @@ localhost()
   ->stage('development');
 
 // Staging
-host('91.201.60.110')
-  ->hostname('staging')
+host('staging')
+  ->hostname('91.201.60.110')
   ->set('deploy_path', '/home/wttooling/staging.wttooling.se')
   ->set('local_path', '/Users/kallenilsson/Documents/dev/woodtechnique')
   ->port(22)
@@ -30,8 +30,8 @@ host('91.201.60.110')
   ->addSshOption('UserKnownHostsFile', '/dev/null');
 
 // Production
-host('91.201.60.110')
-  ->hostname('production')
+host('production')
+  ->hostname('91.201.60.110')
   ->set('deploy_path', '/home/wttooling/wttooling.se')
   ->set('local_path', '/Users/kallenilsson/Documents/dev/woodtechnique')
   ->port(22)
