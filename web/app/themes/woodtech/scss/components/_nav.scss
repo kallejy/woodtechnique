@@ -76,6 +76,114 @@
 			}
 		}
 
+		// Sub 
+    ul.sub-menu {
+      position: absolute;
+      display: none;
+      background: $black;
+      width: 300px;
+      text-align: left;
+      margin-left: 50%;
+      left: -150px;
+      margin-top: 0;
+      text-align: center;
+      z-index: 1000;
+      @include border-radius(0 0 4px 4px);
+
+      &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 8px 8px 8px;
+        border-color: transparent transparent $black transparent;
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        margin-left: -8px;
+        z-index: 1000;
+
+        @include bp-md {
+          display: none;
+        }
+      }
+
+      li {
+        display: block;
+        margin-right: 0;
+
+        @include bp-md {
+          margin-left: 0;
+          width: 100%;
+          border-bottom: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+          @include bp-md {
+            padding-bottom: 1rem;
+          } 
+        }
+
+        a:link,
+        a:visited {
+          display: block;
+          width: 100%;
+          padding: 1rem;
+          color: $white;
+
+          &:hover {
+            color: rgba($white, 50/100);
+          }
+
+          @include bp-md {
+            color: $third-color;
+            padding: .5rem 0;
+
+            &:hover {
+              color: rgba($third-color, 50/100);
+            }
+          }
+        }
+      }
+
+      @include bp-md {
+        width: calc(100% - 1rem);
+        position: relative;
+        margin-top: 0;
+        background: transparent;
+        margin-left: 1rem;
+        left: 0;
+      }
+    }
+
+    &.menu-item-has-children {
+      position: relative;
+      @include bp-md {
+        &:before {
+          position: absolute;
+          content:"";
+          width: 12px;
+          height: 6px;
+          right: 0;
+          top: 24px;
+          background: url(assets/img/has_children.svg);
+          background-size: 100%;
+        }
+
+        &:hover {
+          &:before {
+            @include transform(rotate(180deg));
+          }
+        }
+      }
+    }
+
+    &.menu-item-has-children:hover > ul.sub-menu {
+      display: block;
+    }
+
 		&.hidden-item {
 			display: none;
 			@include bp-md {
