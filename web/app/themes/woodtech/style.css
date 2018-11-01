@@ -1801,6 +1801,10 @@ img.branded-symbol {
 .gform_wrapper ul li {
   padding-right: 0; }
 
+.gform_confirmation_message {
+  color: #757575;
+  line-height: 1.618; }
+
 .btn,
 a.btn {
   border: none;
