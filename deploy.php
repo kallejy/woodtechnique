@@ -29,11 +29,11 @@ host('91.201.60.110')
   ->addSshOption('UserKnownHostsFile', '/dev/null');
 
 // Production
-host('shishi.oderland.com')
+host('91.201.60.110')
   ->port(22)
-  ->set('deploy_path', '/home/fempunk1/woodtechnique.5punkter.se')
+  ->set('deploy_path', '/home/wttooling/wttooling.se')
   ->set('local_path', '/Users/kallenilsson/Documents/dev/woodtechnique')
-  ->user('fempunk1')
+  ->user('wttooling')
   ->set('branch', 'master')
   ->stage('production')
   ->identityFile('~/.ssh/id_5punkter')
