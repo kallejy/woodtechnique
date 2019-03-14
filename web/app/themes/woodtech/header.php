@@ -33,7 +33,7 @@
     <div class="row  row-header">
       <div class="main-logo  col-xs-8  col-sm-4  col-md-3">
         <a href="<?php echo home_url(); ?>" class="logo">
-          <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/woodtechnique_logo.svg" alt="Wood Technique Logotyp">
+          <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/wexio_tooling_logotyp_org.svg" alt="Wexiö Tooling Logotyp">
         </a>
       </div>
       <nav class="main-nav  col-xs-12  col-sm-12  col-md-9  end-md  relative  resize">
